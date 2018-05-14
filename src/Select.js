@@ -3,17 +3,6 @@ import cn from 'classnames';
 import data from './data'
 import { mobileCheck } from './utils'
 
-const KEY_CODES = {
-  TAB: 9,
-  ENTER: 13,
-  ESC: 27,
-  SPACE: 32,
-  ARROW_UP: 38,
-  ARROW_LEFT: 37,
-  ARROW_RIGHT: 39,
-  ARROW_DOWN: 40,
-};
-
 export default class Select extends Component {
   state = {
     isOpen: false,
@@ -22,7 +11,6 @@ export default class Select extends Component {
   }
 
   handleOpen = () => {
-
     const windowHeight = window.innerHeight
     const selectHeight = this.select.getBoundingClientRect().bottom
     const GAP = 255
