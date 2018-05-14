@@ -15,9 +15,13 @@ body {
   border-radius: 4px;
   padding: 15px;
   cursor: pointer;
-  background: #fff;
+}
+.select__native {
+  overflow: hidden;
 }
 .select select {
+  background: #fff;
+  width: 100%;
   border: none;
   font-size: 16px;
   -webkit-appearance: none;

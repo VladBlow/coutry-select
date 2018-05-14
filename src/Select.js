@@ -53,7 +53,7 @@ export default class Select extends Component {
 
     if (isMobile) {
       return (
-        <div className="select">
+        <div className="select select--native">
           <select>
             {filteredValues.map(([key, value]) => (
               <option value={key}>{value}</option>
