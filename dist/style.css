@@ -1,0 +1,92 @@
+body {
+  font-size: 16px;
+  font-family: Arial;
+}
+.wrapper {
+  width: 300px;
+  margin: 330px auto 0;
+}
+.hidden {
+  display: none;
+}
+.select {
+  position: relative;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+}
+.select select:focus {
+  outline: none;
+}
+.select:after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  content: '\25BE';
+  color: #666;
+}
+.select--open {
+  border-radius: 4px 4px 0 0;
+}
+.select--open:after {
+  top: 26px;
+  transform: rotate(180deg);
+}
+.select__label {
+  position: absolute;
+  pointer-events: none;
+  top: 17px;
+  left: 20px;
+  transition: 0.2s ease all;
+  color: #333;
+}
+.select__input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.select__input:focus {
+  outline: none;
+}
+.select__input:focus ~ .select__label,
+.select__input:not(:focus):valid ~ .select__label {
+  top: -8px;
+  opacity: 1;
+  left: 10px;
+  background: #fff;
+  height: 10px;
+  padding: 0 10px;
+}
+.select__list {
+  position: absolute;
+  top: 50px;
+  left: -1px;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #666;
+  border-radius: 0 0 4px 4px;
+}
+.select--to-top {
+  border-radius: 0 0 4px 4px;
+}
+.select--to-top .select__list {
+  border-radius: 4px 4px 0 0;
+}
+.select__item {
+  padding: 15px;
+}
+.select__item--finded {
+  color: #ff7702;
+  text-decoration: underline;
+}
+.select__item:hover {
+  background: #eee;
+}

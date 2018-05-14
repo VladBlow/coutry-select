@@ -1,0 +1,91 @@
+body
+  font-size: 16px
+  font-family: Arial
+
+.wrapper
+  width: 300px
+  margin: 330px auto 0
+
+.hidden
+  display: none
+
+.select
+  position: relative
+  border: 1px solid #666
+  border-radius: 4px
+  padding: 15px
+  cursor: pointer
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  background: #fff;
+
+  select:focus
+    outline: none
+
+  &:after
+    position: absolute
+    top: 15px
+    right: 15px
+    width: 10px
+    height: 10px
+    content: '▾'
+    color: #666
+
+  &--open
+    border-radius: 4px 4px 0 0
+
+    &:after
+      top: 26px
+      transform: rotate(180deg)
+
+  &__label
+    position: absolute
+    pointer-events: none
+    top: 17px
+    left: 20px
+    transition: 0.2s ease all
+    color: #333
+
+  &__input
+    border: none
+    outline: none
+    font-size: 16px
+
+    &:focus
+      outline: none
+
+    &:focus ~ .select__label,
+    &:not(:focus):valid ~ .select__label
+      top: -8px
+      opacity: 1
+      left: 10px
+      background: #fff
+      height: 10px
+      padding: 0 10px
+
+  &__list
+    position: absolute
+    top: 50px
+    left: -1px
+    width: 100%
+    max-height: 250px
+    overflow-y: auto
+    border: 1px solid #666
+    border-radius: 0 0 4px 4px
+
+  &--to-top
+    border-radius:  0 0 4px 4px
+
+    .select__list
+      border-radius: 4px 4px 0 0
+
+  &__item
+    padding: 15px
+
+    &--finded
+      color: #ff7702
+      text-decoration: underline
+
+    &:hover
+      background: #eee
