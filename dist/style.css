@@ -17,11 +17,15 @@ body {
   cursor: pointer;
   background: #fff;
 }
-.select select:focus {
-  outline: none;
+.select select {
+  border: none;
+  font-size: 16px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+.select select:focus {
+  outline: none;
 }
 .select:after {
   position: absolute;
