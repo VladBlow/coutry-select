@@ -15,13 +15,13 @@ body {
   border-radius: 4px;
   padding: 15px;
   cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: #fff;
 }
 .select select:focus {
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .select:after {
   position: absolute;
